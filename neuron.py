@@ -12,6 +12,9 @@ class layer_dense:
 
     def forward(self,inputs):
         self.output = np.dot(inputs,self.weights) + self.bias
+class activation_relu:
+    def forward(self,inputs):
+        self.output = np.maximum(0,inputs)
 
 layer1 = layer_dense(4,5)
 layer2 = layer_dense(5,4)
